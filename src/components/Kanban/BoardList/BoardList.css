@@ -1,0 +1,8 @@
+.BoardList {
+	width: 100%;
+	height: 10%;
+	background: chocolate;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

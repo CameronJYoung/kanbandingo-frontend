@@ -1,0 +1,10 @@
+.Login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	height: 100%;
+	font-size: 2rem;
+	padding-left: 20px;
+	padding-right: 20px;
+}

@@ -1,0 +1,29 @@
+.Board {
+	width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: row;
+}
+.columnContainer{
+	width: 85%;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 100%;
+	background: crimson;
+	display: flex;
+	flex-direction: row;
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+.columnMenu {
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+}
+
+.addColumn {
+	width: 100%;
+	height: 100%;
+}

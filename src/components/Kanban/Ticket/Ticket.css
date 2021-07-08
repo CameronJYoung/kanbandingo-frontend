@@ -1,0 +1,18 @@
+.Ticket {
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: royalblue;
+}
+
+.hidden {
+	display: none;
+}
+
+.closeTicket {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
