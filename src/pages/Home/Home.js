@@ -6,7 +6,7 @@ import BoardList from '../../components/Kanban/BoardList/BoardList'
 import Board from '../../components/Kanban/Board/Board'
 import Ticket from '../../components/Kanban/Ticket/Ticket'
 import AuthApi from '../../api/Auth'
-import KanbanApi from '../../api/Kanban'
+import KanbanApi from '../../api/Kanban' 
 
 
 function Home() {
