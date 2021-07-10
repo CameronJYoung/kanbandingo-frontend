@@ -8,7 +8,7 @@ function Auth() {
 	console.log(process.env);
 	return (
 		<div className="Auth">
-			<Register></Register>
+			<Register></Register> 
 			<Login></Login>
 		</div>
 	);
