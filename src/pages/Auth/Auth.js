@@ -5,6 +5,7 @@ import Register from '../../components/Register/Register';
 import Login from '../../components/Login/Login';
 
 function Auth() {
+	console.log(process.env);
 	return (
 		<div className="Auth">
 			<Register></Register>
