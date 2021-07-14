@@ -5,8 +5,8 @@
 	},
 	"https_only": true,
 	"proxies": {
-	  "https://kanbandingo-api.herokuapp.com/": {
-		"origin": "https://kanbandingo-api.herokuapp.com/"
+	  "https://kanbandingo-api.herokuapp.com": {
+		"origin": "https://kanbandingo-api.herokuapp.com"
 	  }
 	}
   }
