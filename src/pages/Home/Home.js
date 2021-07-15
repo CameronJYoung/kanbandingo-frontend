@@ -38,7 +38,8 @@ function Home() {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-			}
+			},
+			credentials: 'same-origin'
 		}).then(response => response.json())
 			.then(data => console.log(data));
 	}, [])
