@@ -29,10 +29,14 @@ function Home() {
 	}
 
 	useEffect(() => {
-		AuthApi.verify().then(res => {
-			setAuth(res)
+		// AuthApi.verify().then(res => {
+		// 	setAuth(res)
 			
-		})
+		// })
+
+		fetch(`${process.env.REACT_APP_API_BASEURL}/auth/verify`)
+			.then(response => response.json())
+			.then(data => console.log(data));
 	}, [])
 
 	return (
