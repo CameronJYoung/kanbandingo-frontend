@@ -20,17 +20,7 @@ function Login() {
 			"password": passwordField.value
 		}
 		
-		//AuthApi.login(userDetails);
-		fetch(`${process.env.REACT_APP_API_BASEURL}auth/login`, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Credentials': 'true',
-				'Access-Control-Allow-Origin': process.env.REACT_APP_API_BASEURL
-			},
-			credentials: 'include',
-			body: userDetails
-		}).then(response => console.log(response));
+		AuthApi.login(userDetails);
 	}
 
 	const checkLogin = (e) => {
