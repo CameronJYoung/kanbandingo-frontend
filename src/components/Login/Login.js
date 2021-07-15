@@ -25,8 +25,10 @@ function Login() {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Credentials': 'true'
+				'Access-Control-Allow-Credentials': 'true',
+				'Access-Control-Allow-Origin': process.env.REACT_APP_API_BASEURL
 			},
+			
 			body: userDetails
 		}).then(response => console.log(response));
 	}
