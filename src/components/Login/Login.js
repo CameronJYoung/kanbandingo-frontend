@@ -26,7 +26,7 @@ function Login() {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			credentials: 'same-origin',
+			credentials: 'include',
 			userDetails
 		}).then(response => console.log(response));
 	}
