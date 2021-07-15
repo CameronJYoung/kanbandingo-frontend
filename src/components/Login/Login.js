@@ -27,7 +27,7 @@ function Login() {
 				'Content-Type': 'application/json',
 			},
 			credentials: 'include',
-			userDetails
+			body: userDetails
 		}).then(response => console.log(response));
 	}
 
