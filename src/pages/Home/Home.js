@@ -34,7 +34,11 @@ function Home() {
 			
 		// })
 
-		fetch(`${process.env.REACT_APP_API_BASEURL}auth/verify`)
+		fetch(`${process.env.REACT_APP_API_BASEURL}auth/verify`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			}})
 			.then(response => response.json())
 			.then(data => console.log(data));
 	}, [])
