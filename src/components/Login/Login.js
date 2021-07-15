@@ -28,7 +28,7 @@ function Login() {
 				'Access-Control-Allow-Credentials': 'true',
 				'Access-Control-Allow-Origin': process.env.REACT_APP_API_BASEURL
 			},
-			
+			credentials: 'include',
 			body: userDetails
 		}).then(response => console.log(response));
 	}
