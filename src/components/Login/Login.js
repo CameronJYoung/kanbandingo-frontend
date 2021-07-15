@@ -25,6 +25,7 @@ function Login() {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
+				'Access-Control-Allow-Credentials': 'true'
 			},
 			credentials: 'include',
 			body: userDetails
