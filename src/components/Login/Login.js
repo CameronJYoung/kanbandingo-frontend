@@ -27,7 +27,6 @@ function Login() {
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Credentials': 'true'
 			},
-			credentials: 'include',
 			body: userDetails
 		}).then(response => console.log(response));
 	}
