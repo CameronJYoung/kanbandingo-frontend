@@ -11,6 +11,7 @@ const Auth = {
 	
 	login: (details) => {
 		api.post('/auth/login', details).then(res => {
+			localStorage.setItem('auth_token', res.data.token)
 			console.log(res);
 		}).catch(err => {
 			console.log(err);
@@ -18,7 +19,11 @@ const Auth = {
 	},
 
 	verify: async () => {
-		return await api.post('/auth/verify').then(res => {
+		return await api.post('/auth/verify', {
+			headers: {
+				Authorization: localStorage.getItem('auth_token')
+			}
+		}).then(res => {
 			return true
 		}).catch(err => {
 			return false
