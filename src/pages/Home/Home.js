@@ -45,7 +45,7 @@ function Home() {
 					auth ? <BoardList handleSelectedBoard={handleSelectedBoard} ></BoardList>:<AuthError></AuthError>
 				}
 				{
-					selectedBoardId ? <Board id={selectedBoardId} handleSelectedTicket={handleSelectedTicket} ></Board>:<div>Select Board</div>
+					selectedBoardId ? <Board id={selectedBoardId} handleSelectedTicket={handleSelectedTicket} ></Board>:<div className='selectBoard'>Select Board</div>
 				}
 			</div>
 			{

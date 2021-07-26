@@ -42,15 +42,18 @@ function BoardList(props) {
 			<div>
 				{
 					boardItems.map((item, index) => {
-						return <button onClick={() => {
+						return <button className='boardBtn' onClick={() => {
 							update(item.id)
 						}} key={`boardItem${index}`} ><h2>{item.name}</h2></button>
 					})
 				}
 			</div>
-			<div>
-				<input type="text" id="comment" {...newBoardField}></input>
-				<button onClick={updateBoardItems} >+</button>
+			<div className="boardControls">
+				<h3>Add Board</h3>
+				<span>
+					<input type="text" id="comment" {...newBoardField}></input>
+					<button onClick={updateBoardItems} >+</button>
+				</span>
 			</div>
 			
 		</div>

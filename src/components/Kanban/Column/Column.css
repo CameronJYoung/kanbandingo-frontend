@@ -3,10 +3,14 @@
 	margin-right: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-left: black 4px solid;
-	border-right: black 4px solid;
+	border: black 4px solid;
+	height: 90%;
 	display: flex;
 	flex-direction: column;
+}
+
+.columnOptions {
+	margin-bottom: 10px;
 }
 
 .ticketContainer {
