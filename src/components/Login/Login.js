@@ -32,10 +32,10 @@ function Login() {
 	return (
 		<form className="Login">
 			<label htmlFor="username">Username:</label>
-			<input type="name" id="username" {...usernameField}></input>
+			<input className="authField" type="name" id="username" {...usernameField}></input>
 
 			<label htmlFor="password">Password:</label>
-			<input type="password" id="password" {...passwordField}></input>
+			<input className="authField" type="password" id="password" {...passwordField}></input>
 
 			<button onClick={handleSubmit}>Log In</button>
 			<button onClick={checkLogin}>Check Login</button>

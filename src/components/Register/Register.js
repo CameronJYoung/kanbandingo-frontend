@@ -31,16 +31,16 @@ function Register() {
 	return (
 		<form className="Register">
 			<label htmlFor="username">Username:</label>
-			<input type="name" id="username" {...usernameField}></input>
+			<input className="authField" type="name" id="username" {...usernameField}></input>
 
 			<label htmlFor="email">Email:</label>
-			<input type="email" id="email" {...emailField}></input>
+			<input className="authField" type="email" id="email" {...emailField}></input>
 
 			<label htmlFor="password">Password:</label>
-			<input type="password" id="password" {...passwordField}></input>
+			<input className="authField" type="password" id="password" {...passwordField}></input>
 
 			<label htmlFor="confirmPassword">Confirm password:</label>
-			<input type="password" id="confirmPassword"{...confirmPasswordField}></input>
+			<input className="authField" type="password" id="confirmPassword"{...confirmPasswordField}></input>
 
 			<button onClick={handleSubmit}>Register</button>
 		</form>

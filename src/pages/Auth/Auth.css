@@ -3,3 +3,8 @@
 	height: 100%;
 	display: flex;
 }
+
+.authField {
+	height: 30px;
+	font-size: 24px;
+}
