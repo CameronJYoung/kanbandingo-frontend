@@ -6,7 +6,6 @@ import BoardList from '../../components/Kanban/BoardList/BoardList'
 import Board from '../../components/Kanban/Board/Board'
 import Ticket from '../../components/Kanban/Ticket/Ticket'
 import AuthApi from '../../api/Auth'
-import KanbanApi from '../../api/Kanban' 
 
 
 function Home() {
@@ -28,10 +27,18 @@ function Home() {
 		}
 	}
 
+	function showSelectMessage() {
+		if (auth && selectedBoardId) {
+			return <Board id={selectedBoardId} handleSelectedTicket={handleSelectedTicket} ></Board>
+		} else if (auth && !selectedBoardId) {
+			return <div className='selectBoard'>Select Board</div>
+		}
+	}
+
 	useEffect(() => {
 		AuthApi.verify().then(res => {
 			setAuth(res)
-			
+			console.log(auth);
 		})
 	}, [])
 
@@ -45,13 +52,11 @@ function Home() {
 					auth ? <BoardList handleSelectedBoard={handleSelectedBoard} ></BoardList>:<AuthError></AuthError>
 				}
 				{
-					selectedBoardId ? <Board id={selectedBoardId} handleSelectedTicket={handleSelectedTicket} ></Board>:<div className='selectBoard'>Select Board</div>
+					showSelectMessage()
 				}
 			</div>
 			{
 				openTicket()
-					
-				
 			}
 			
 		</div>	
