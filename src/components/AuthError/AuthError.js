@@ -8,7 +8,7 @@ import AuthApi from '../../api/Auth'
 function AuthError() {
 	return (
 		<div className="AuthError">
-			ERROR
+			ERROR: YOU NEED TO LOGIN
 		</div>
 	);
 }
