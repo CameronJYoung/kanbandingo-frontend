@@ -1,12 +1,8 @@
 import React from 'react';
 
-import { useHistory } from "react-router-dom";
-
 import AuthApi from '../../api/Auth'
 import useFormField from '../../hooks/useFormField'
 import './Login.css';
-
-import Kanban from '../../api/Kanban'
 
 function Login() {
 	const usernameField = useFormField();
@@ -23,12 +19,6 @@ function Login() {
 		AuthApi.login(userDetails);
 	}
 
-	const checkLogin = (e) => {
-		e.preventDefault();
-
-		Kanban.getUserBoards();
-	}
-
 	return (
 		<form className="Login">
 			<label htmlFor="username">Username:</label>
@@ -38,7 +28,6 @@ function Login() {
 			<input className="authField" type="password" id="password" {...passwordField}></input>
 
 			<button onClick={handleSubmit}>Log In</button>
-			<button onClick={checkLogin}>Check Login</button>
 		</form>
 	);
   }
