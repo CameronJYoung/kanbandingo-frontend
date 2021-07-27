@@ -1,4 +1,5 @@
 import api from "./api";
+import addAuthHeader from "./addAuthHeader";
 
 const Auth = {
 	register: (details) => {
@@ -19,11 +20,9 @@ const Auth = {
 	},
 
 	verify: async () => {
-		return await api.post('/auth/verify', {
-			headers: {
-				Authorization: localStorage.getItem('auth_token')
-			}
-		}).then(res => {
+		addAuthHeader(api);
+
+		return await api.post('/auth/verify').then(res => {
 			return true
 		}).catch(err => {
 			return false
