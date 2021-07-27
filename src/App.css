@@ -11,15 +11,21 @@ nav {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	background: #BB7E5D;
 }
 
 nav > h1 {
 	font-size: 3em;
 	text-align: center;
-	width: 230px;
 	border-bottom: 4px solid black;
+	margin-left: 20px;
+}
+
+nav > ul > li > a {
+	font-size: 2.5em;
+	text-align: center;
+	color: black;
 }
 
 nav > ul {
@@ -28,16 +34,14 @@ nav > ul {
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 0;
-	margin: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 20px;
 	height: 50%;
-	width: 230px;
+	width: 80%;
 }
 
-nav > ul > li > a {
-	font-size: 2.5em;
-	text-align: center;
-	color: black;
-}
+
 
 nav > ul > li > a:hover {
 	color: #542344;
@@ -47,4 +51,35 @@ nav > ul > li > a:hover {
 	height: 100%;
 	width: 80%;
 	background: #33658A;
+}
+
+
+@media only screen and (max-width: 1340px) {
+	nav > h1 {
+		font-size: 2em;
+	}
+
+	nav > ul > li > a {
+		font-size: 1.5em;
+		text-align: center;
+		color: black;
+	}
+}
+
+@media only screen and (max-width: 972px) {
+	nav > ul {
+		margin-left: 10px;
+	}	
+
+	
+	nav > h1 {
+		margin-left: 10px;
+		font-size: 1.2em;
+	}
+
+	nav > ul > li > a {
+		font-size: 1em;
+		text-align: center;
+		color: black;
+	}
 }
