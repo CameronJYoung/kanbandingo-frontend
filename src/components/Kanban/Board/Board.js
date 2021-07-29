@@ -19,6 +19,12 @@ function Board(props) {
 		
 	}
 
+	function testing() {
+		KanbanApi.getColumnsByBoardId(props.id).then(res => {
+			setColumns(res.data)
+		})
+	}
+
 	useEffect(() => {
 		let mounted = true;
 		KanbanApi.getColumnsByBoardId(props.id).then(res => {
@@ -39,7 +45,7 @@ function Board(props) {
 				{
 					
 					columns.map((item, index) => {
-						return <Column key={`column_${item.id}`} handleSelectedTicket={props.handleSelectedTicket} boardId={props.id} columnId={item.id} columnName={item.name} ></Column>
+						return <Column testing={testing} key={`column_${item.id}`} handleSelectedTicket={props.handleSelectedTicket} boardId={props.id} columnId={item.id} columnName={item.name} ></Column>
 					})
 				}
 			</div>

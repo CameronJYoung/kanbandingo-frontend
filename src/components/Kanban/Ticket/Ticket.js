@@ -45,7 +45,7 @@ function Ticket(props) {
 			<div className="commentContainer">
 				{
 					comments.map((comment, id) => {
-						return <><div>{comment.content}</div><br></br></>
+						return <div className='comment' key={id}>{comment.content}</div>
 					})
 				}
 				<input type="text" id="comment" {...commentField}></input>

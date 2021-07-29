@@ -7,6 +7,11 @@
 	background: royalblue;
 }
 
+.comment {
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
 .hidden {
 	display: none;
 }
