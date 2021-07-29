@@ -41,6 +41,16 @@ function Column(props) {
 		e.dataTransfer.setData('ticket_id', id);
 	}
 
+	function handleTicketDragEnd(e, id) {
+		const newTickets = [];
+		tickets.forEach((i) => {
+			if (i.id !== id) {
+				newTickets.push(i)
+			}
+		})
+		setTickets(newTickets);
+	}
+
 	function onDragOver(e) {
 		e.stopPropagation();
 		e.preventDefault();
@@ -62,7 +72,7 @@ function Column(props) {
 				<div className="ticketList" >
 					{
 						tickets.map((ticket, i) => {
-							return <button draggable='true' onDragStart={(e)=>{handleTicketDragStart(e, ticket.id)}} key={`ticket_tile${ticket.id}`} onClick={() => {
+							return <button draggable='true' onDragEnd={(e) => {handleTicketDragEnd(e, ticket.id)}} onDragStart={(e)=>{handleTicketDragStart(e, ticket.id)}} key={`ticket_tile${ticket.id}`} onClick={() => {
 								update(ticket.id)
 							}}>Test Ticket {ticket.id}</button>
 						})
